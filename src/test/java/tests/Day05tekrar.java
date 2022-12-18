@@ -17,6 +17,8 @@ import java.util.Locale;
 public class Day05tekrar {
   /*
 
+  degisiklik
+
    */
 
 }
