@@ -34,6 +34,7 @@ public class Day05_DropDown {
     //2.Create method selectByVisibleTextTest Select Option 2 by visible text
     @Test
     public void selectByVisibleTextTest(){
+
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);
         select.selectByVisibleText("Option 2");
@@ -57,6 +58,7 @@ public class Day05_DropDown {
     public void printAllTest(){
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);
+
 //        getOptions(); returns all of the dropdown options
         List<WebElement> allOptions = select.getOptions();
         for (WebElement eachOption : allOptions){
@@ -64,6 +66,7 @@ public class Day05_DropDown {
             System.out.println(eachOption.getText());
         }
 //    5. Verify the dropdown has Option 2 text
+       
         boolean isOption2Exist=false;
         for (WebElement eachOption : allOptions){
             if (eachOption.getText().equals("Option 2")){

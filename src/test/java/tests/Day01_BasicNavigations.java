@@ -1,4 +1,5 @@
 package tests;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class Day01_BasicNavigations {
@@ -11,18 +12,18 @@ public class Day01_BasicNavigations {
 //        Maximize the window
         driver.manage().window().maximize();
 //        Open google home page https://www.walmart.com/
-        driver.get("https://www.walmart.com/");
-//        On the same class, Navigate to amazon home page https://www.amazon.com/
-//        driver.get("https://www.amazon.com/");//WORKS
-        driver.navigate().to("https://www.amazon.com/");
-//        Navigate back to walmart
-        driver.navigate().back();
-//        Navigate forward to amazon
-        driver.navigate().forward();
-//        Refresh the page
-        driver.navigate().refresh();
-//        Close/Quit the browser
-//        driver.close();
-        driver.quit();
-    }
-}
+
+////        On the same class, Navigate to amazon home page https://www.amazon.com/
+////        driver.get("https://www.amazon.com/");//WORKS
+//        driver.navigate().to("https://www.amazon.com/");
+////        Navigate back to walmart
+//        driver.navigate().back();
+////        Navigate forward to amazon
+//        driver.navigate().forward();
+////        Refresh the page
+//        driver.navigate().refresh();
+////        Close/Quit the browser
+////        driver.close();
+//        driver.quit();
+//    }
+}}

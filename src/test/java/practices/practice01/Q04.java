@@ -40,6 +40,7 @@ public class Q04 {
 
     @Test
     public void test(){
+
         // Navigate to  https://testpages.herokuapp.com/styled/index.html
         driver.get("https://testpages.herokuapp.com/styled/index.html");
 
