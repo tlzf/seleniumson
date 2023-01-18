@@ -45,6 +45,7 @@ public class Homework01 {
         //--Print the first selected option and assert if it equals “All Departments”.If it fails,
 
 
+
         // then comment that code out and continue rest of the test case.
         Select select=new Select(dropDown);
         String selectedOption=select.getFirstSelectedOption().getText();
