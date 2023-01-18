@@ -19,7 +19,7 @@ public class Day03_Assertions {
         assertTrue(false); -> fail
         assertFalse(false); -> pass
         assertFalse(true); -> fail
-        --------------------
+        -------------------
          */
         Assert.assertEquals(5,5);//FAIL
 

@@ -3,7 +3,19 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
+
 import java.util.Set;
+/*
+Create a new Class Tests package: WindowHandleExample
+Method name:windowHandle
+Given user is on the https://the-internet.herokuapp.com/windows
+Then user verifies the text : “Opening a new window”
+Then user verifies the title of the page is “The Internet”
+When user clicks on the “Click Here” button
+Then user verifies the new window title is “New Window”
+Then user verifies the text:  “New Window”
+When user goes back to the previous window and then verifies the title : “The Internet”
+ */
 public class Day07_WindowHandle1 extends TestBase {
     @Test
     public void windowHandleTest() throws InterruptedException {

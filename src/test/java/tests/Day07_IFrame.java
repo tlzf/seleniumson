@@ -4,6 +4,17 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
+
+/*
+Create a class: IFrame
+Create a method: iframeTest
+Go to https://the-internet.herokuapp.com/iframe
+Verify the Bolded text contains “Editor”
+Locate the text box
+Delete the text in the text box
+Type “This text box is inside the iframe”
+Verify the text Elemental Selenium text is displayed on the page
+ */
 public class Day07_IFrame extends TestBase {
     @Test
     public void iframeTest(){
@@ -32,6 +43,10 @@ public class Day07_IFrame extends TestBase {
 //        ALTERNATIVELY WE CAN USE defaultContent()
 //        Verify the text Elemental Selenium text is displayed on the page
         Assert.assertTrue(driver.findElement(By.linkText("Elemental Selenium")).isDisplayed());
+
+
+
+
     }
 }
 

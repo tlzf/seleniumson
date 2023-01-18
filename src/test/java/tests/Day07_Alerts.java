@@ -3,6 +3,26 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
+
+/*
+Go to https://testcenter.techproeducation.com/index.php?page=javascript-alerts
+Create a class: AlertTest
+Create setUp method
+Create 3 test methods:
+acceptAlert() => click on the first alert,
+verify the text “I am a JS Alert” ,
+click OK ,
+and Verify “You successfully clicked an alert”
+dismissAlert()=> click on the second alert,
+verify text "I am a JS Confirm”,
+click cancel,
+and Verify “You clicked: Cancel”
+sendKeysAlert()=> click on the third alert,
+verify text “I am a JS prompt”,
+type “Hello World”,
+click OK,
+and Verify “You entered: Hello World”
+ */
 public class Day07_Alerts extends TestBase {
     @Test
     public void acceptAlert() throws InterruptedException {
@@ -25,9 +45,15 @@ public class Day07_Alerts extends TestBase {
     public void dismissAlert() throws InterruptedException {
 //        dismissAlert()=> click on the second alert,
         Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[.='Click for JS Confirm']")).click();
+
+
+
+
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
         driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
 //         verify text "I am a JS Confirm”,
+        ;
         Thread.sleep(3000);
         String actualAlertText = driver.switchTo().alert().getText();
         Assert.assertEquals("I am a JS Confirm",actualAlertText);
@@ -35,6 +61,7 @@ public class Day07_Alerts extends TestBase {
         driver.switchTo().alert().dismiss();
         Thread.sleep(3000);
 //        and Verify “You clicked: Cancel”
+        
         String actualResult = driver.findElement(By.id("result")).getText();
         Assert.assertEquals("You clicked: Cancel",actualResult);
         Thread.sleep(3000);

@@ -1,4 +1,5 @@
 package tests;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Assert;
@@ -9,9 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
 import java.time.Duration;
 import java.util.List;
+
 public class Day05_DropDown {
+
     WebDriver driver;
     @Before
     public void setUp(){
@@ -34,7 +38,6 @@ public class Day05_DropDown {
     //2.Create method selectByVisibleTextTest Select Option 2 by visible text
     @Test
     public void selectByVisibleTextTest(){
-
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);
         select.selectByVisibleText("Option 2");
@@ -56,17 +59,29 @@ public class Day05_DropDown {
     //4.Create method printAllTest Print all dropdown value
     @Test
     public void printAllTest(){
+
         WebElement dropdown = driver.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);
-
 //        getOptions(); returns all of the dropdown options
         List<WebElement> allOptions = select.getOptions();
         for (WebElement eachOption : allOptions){
 //            getText() returns the TEXT of the webelements as STRING
             System.out.println(eachOption.getText());
         }
+
+
 //    5. Verify the dropdown has Option 2 text
-       
+
+
+
+
+
+
+
+
+
+
+
         boolean isOption2Exist=false;
         for (WebElement eachOption : allOptions){
             if (eachOption.getText().equals("Option 2")){
@@ -77,6 +92,7 @@ public class Day05_DropDown {
 //        pass if Option 2 is in the dropdown
         Assert.assertTrue(isOption2Exist);
     }
+
     //6.Create method printFirstSelectedOptionTest Print first selected option
     @Test
     public void printFirstSelectedOptionTest(){
@@ -88,17 +104,20 @@ public class Day05_DropDown {
         select.selectByIndex(2);
 //        printing the selected option
         System.out.println("Selected Option : "+select.getFirstSelectedOption().getText());
-//        7.Find the size of the dropdown,
+   //7.Find the size of the dropdown,
 //        Print "Expected Is Not Equal Actual" if there are not 3 elements in the dropdown.
         int numberOfOptions = select.getOptions().size();
         int expectedNumberOfOptions = 3;
+
 //        Assertion will print Expected Is Not Equal Actual ONLY IF THIS ASSERTION FAILS
         Assert.assertEquals("Expected Is Not Equal Actual",expectedNumberOfOptions,numberOfOptions);
     }
+
     @After
     public void tearDown(){
         driver.quit();
     }
+
     /*
     -What is a dropdown?
         ---Dropdown is a webelement. It has list of options.
@@ -108,4 +127,7 @@ public class Day05_DropDown {
     -How do you select dropdown elements?
         ---We actually have 3 options to select a dropdown(index,value,visible text)
      */
+
+
+
 }
